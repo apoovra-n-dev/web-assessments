@@ -1,0 +1,357 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #1f2937;
+    color: white;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.company-logo h2 {
+    margin: 0;
+      font-size: 40px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 25px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+.dashboard-layout {
+    display: flex;
+    min-height: calc(100vh - 140px);
+}
+
+.dashboard-layout {
+    display: flex;
+    align-items: flex-start;
+}
+
+aside {
+    width: 230px;
+    background-color: #111827;
+    color: white;
+    padding: 25px 20px;
+
+    position: sticky;
+    top: 0;
+
+    height: 100vh;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+aside h2 {
+    margin-top: 0;
+}
+aside ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+aside li {
+    margin-bottom: 15px;
+}
+aside a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+aside a:hover {
+    background-color: #374151;
+}
+
+main {
+    flex: 1;
+    padding: 30px;
+    min-width:0;
+}
+
+section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+section h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.summary-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.summary-card {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f8fafc;
+    text-align: center;
+}
+.summary-card h3 {
+    margin-top: 0;
+    font-size: 16px;
+}
+.summary-card p {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.employee-registration form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: inherit;
+}
+.form-group textarea {
+    resize: vertical;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px #bfdbfe;
+}
+.form-group input:valid,
+.form-group select:valid {
+    border-color: #16a34a;
+}
+.form-buttons {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 10px;
+}
+.form-buttons button {
+    padding: 12px 25px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+.form-buttons button[type="submit"] {
+    background-color: #2563eb;
+    color: white;
+}
+
+.form-buttons button[type="reset"] {
+    background-color: #e5e7eb;
+    color: #111;
+}
+.form-buttons button:hover {
+    opacity: 0.85;
+}
+
+
+.employee-table-section {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}
+
+caption {
+    text-align: left;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+th {
+    background-color: #1f2937;
+    color: white;
+}
+tbody tr:nth-child(even) {
+    background-color: #f3f4f6;
+}
+tbody tr:hover {
+    background-color: #e5e7eb;
+}
+td button {
+    padding: 7px 14px;
+    border: 1px solid #2563eb;
+    background-color: #2563eb;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+td button:hover {
+    background-color: #1d4ed8;
+}
+
+.status-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.status-list article {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+}
+.status-list article:first-child {
+    border-left: 5px solid #16a34a;
+}
+
+.status-list article:nth-child(2) {
+    border-left: 5px solid #dc2626;
+}
+
+.status-list article:nth-child(3) {
+    border-left: 5px solid #f59e0b;
+}
+.status-list h3 {
+    margin-top: 0;
+}
+
+.salary-categories {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.salary-categories article {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #f8fafc;
+}
+.salary-categories h3 {
+    margin-top: 0;
+}
+footer {
+    background-color: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 767px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .dashboard-layout {
+        flex-direction: column;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    aside ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+    }
+    main {
+        padding: 15px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    .summary-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .employee-registration form {
+        grid-template-columns: 1fr;
+    }
+
+    .form-buttons {
+        grid-column: auto;
+    }
+
+    .status-list {
+        grid-template-columns: 1fr;
+    }
+
+    .salary-categories {
+        grid-template-columns: 1fr;
+    }
+
+    table {
+        min-width: 800px;
+    }
+
+}

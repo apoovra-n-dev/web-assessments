@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+
+    <div class="container">
+
+        <h1 id="themeText">Theme: Light</h1>
+        
+        <h1>Offline-Aware UI</h1>
+
+       <!-- 1. ONLINE / OFFLINE STATUS -->
+
+        <div id="connectionStatus">
+            Checking connection...
+        </div>
+
+
+        <!--  2. THEME SELECTION -->
+        <div class="card">
+
+            <h2>Theme Preference</h2>
+
+            <button id="lightButton" onclick="changeTheme('light')">
+                Light Theme
+            </button>
+
+            <button id="darkButton" onclick="changeTheme('dark')">
+                Dark Theme
+            </button>
+
+        </div>
+
+        <!-- 3. MOCK DATA -->
+
+        <div class="card">
+
+            <h2>Application Data</h2>
+
+            <p id="loading">
+                Loading data...
+            </p>
+
+            <p id="error"></p>
+
+            <div class="data-box">
+                <strong>User Data:</strong>
+                <p id="userData">Waiting...</p>
+            </div>
+
+            <div class="data-box">
+                <strong>Product Data:</strong>
+                <p id="productData">Waiting...</p>
+            </div>
+
+        </div>
+
+
+        <!-- CACHE API EXPLANATION -->
+        <div class="card">
+
+            <h2>Cache API</h2>
+
+            <p>
+                If this application needed proper offline support,
+                the Cache API could store network resources such as
+                HTML, CSS, JavaScript, images, and API responses.
+            </p>
+
+            <p>
+                A Service Worker could use the Cache API to serve
+                cached resources when the application is offline.
+            </p>
+
+        </div>
+
+    </div>
+
+    <script src="promises.js"></script>
+</body>
+</html>
