@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container header-content">
+        <div>
+            <h1>Employee Management System</h1>
+            <p>Manage employees, roles and departments</p>
+        </div>
+
+        <button id="addEmployeeBtn" class="btn btn-primary" aria-label="Add a new employee">
+            + Add Employee
+        </button>
+    </div>
+</header>
+
+<main class="container">
+
+    <h2>Employee Dashboard</h2>
+
+    <!-- Dashboard -->
+    <section class="dashboard-grid">
+
+        <article class="dashboard-card">
+            <span class="card-icon">👥</span>
+            <div>
+                <p>Total Employees</p>
+                <h3 id="totalEmployees">0</h3>
+            </div>
+        </article>
+
+        <article class="dashboard-card">
+            <span class="card-icon">✅</span>
+            <div>
+                <p>Active Employees</p>
+                <h3 id="activeEmployees">0</h3>
+            </div>
+        </article>
+
+        <article class="dashboard-card">
+            <span class="card-icon">⏸️</span>
+            <div>
+                <p>Inactive Employees</p>
+                <h3 id="inactiveEmployees">0</h3>
+            </div>
+        </article>
+
+        <article class="dashboard-card">
+            <span class="card-icon">🏢</span>
+            <div>
+                <p>Departments</p>
+                <h3 id="departmentCount">0</h3>
+            </div>
+        </article>
+
+    </section>
+
+    <!-- Filters -->
+    <section class="filter-section">
+
+        <div class="filter-group">
+            <label for="searchInput">Search Employees</label>
+            <input id="searchInput" type="search"
+                   placeholder="Search by name or email">
+        </div>
+
+        <div class="filter-group">
+            <label for="departmentFilter">Department</label>
+            <select id="departmentFilter">
+                <option value="">All Departments</option>
+                <option>Engineering</option>
+                <option>Sales</option>
+                <option>HR</option>
+                <option>Marketing</option>
+                <option>Finance</option>
+            </select>
+        </div>
+
+        <div class="filter-group">
+            <label for="sortSelect">Sort By</label>
+            <select id="sortSelect">
+                <option value="">Default</option>
+                <option value="name">Name</option>
+                <option value="department">Department</option>
+                <option value="joinDate">Join Date</option>
+            </select>
+        </div>
+
+    </section>
+
+    <!-- Employee List -->
+    <section class="employee-section">
+
+        <div class="section-header">
+            <div>
+                <h2>Employee List</h2>
+                <p id="employeeCount">0 employees found</p>
+            </div>
+
+            <button id="clearFiltersBtn" class="btn btn-secondary">
+                Clear Filters
+            </button>
+        </div>
+
+        <div id="loading" class="loading">
+            Loading employees...
+        </div>
+
+        <div id="errorMessage" class="error-message"></div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Department</th>
+                        <th>Role</th>
+                        <th>Join Date</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody id="employeeTableBody"></tbody>
+            </table>
+        </div>
+
+        <div id="emptyState" class="empty-state">
+            No employees found.
+        </div>
+
+    </section>
+
+</main>
+
+<!-- Add / Edit Modal -->
+<div id="employeeModal" class="modal">
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+            <h2 id="modalTitle">Add Employee</h2>
+
+            <button id="closeModalBtn" class="close-btn">
+                &times;
+            </button>
+        </div>
+
+        <form id="employeeForm">
+
+            <div class="form-group">
+                <label for="employeeName">Full Name</label>
+                <input id="employeeName" type="text"
+                       placeholder="Enter full name">
+                <small id="nameError" class="field-error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="employeeEmail">Email</label>
+                <input id="employeeEmail" type="email"
+                       placeholder="Enter email">
+                <small id="emailError" class="field-error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="employeeDepartment">Department</label>
+                <select id="employeeDepartment">
+                    <option value="">Select Department</option>
+                    <option>Engineering</option>
+                    <option>Sales</option>
+                    <option>HR</option>
+                    <option>Marketing</option>
+                    <option>Finance</option>
+                </select>
+                <small id="departmentError" class="field-error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="employeeRole">Role</label>
+                <input id="employeeRole" type="text"
+                       placeholder="Enter role">
+                <small id="roleError" class="field-error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="employeeJoinDate">Join Date</label>
+                <input id="employeeJoinDate" type="date">
+            </div>
+
+            <div class="form-group">
+                <label for="employeeStatus">Status</label>
+                <select id="employeeStatus">
+                    <option value="active">Active</option>
+                    <option value="inactive">Inactive</option>
+                </select>
+            </div>
+
+            <div class="modal-actions">
+                <button type="button" id="cancelModalBtn"
+                        class="btn btn-secondary">
+                    Cancel
+                </button>
+
+                <button type="submit" class="btn btn-primary" aria-label="Close employee form">
+                    Save Employee
+                </button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<!-- Delete Modal -->
+<div id="deleteModal" class="modal">
+
+    <div class="modal-content delete-content">
+
+        <h2>Delete Employee?</h2>
+
+        <p>
+            Are you sure you want to delete
+            <strong id="deleteEmployeeName"></strong>?
+        </p>
+
+        <p>This action cannot be undone.</p>
+
+        <div class="modal-actions">
+            <button id="cancelDeleteBtn"
+                    class="btn btn-secondary">
+                Cancel
+            </button>
+
+            <button id="confirmDeleteBtn"
+                    class="btn btn-danger">
+                Delete
+            </button>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    Employee Management System © 2026
+</footer>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+{
+  "employees": [
+    {
+      "id": "2",
+      "name": "Rahul Verma",
+      "email": "rahul.verma@gmail.com",
+      "department": "Sales",
+      "role": "Sales Executive",
+      "joinDate": "2023-06-20",
+      "status": "active"
+    },
+    {
+      "name": "Anita Patel",
+      "email": "anita.patel@gmail.com",
+      "department": "HR",
+      "role": "HR Manager",
+      "joinDate": "2022-03-10",
+      "status": "active",
+      "id": "3"
+    },
+    {
+      "name": "Vikram Singh",
+      "email": "vikram.singh@gmail.com",
+      "department": "Marketing",
+      "role": "Marketing Specialist",
+      "joinDate": "2024-08-05",
+      "status": "inactive",
+      "id": "4"
+    },
+    {
+      "name": "Sneha Reddy",
+      "email": "sneha.reddy@gmail.com",
+      "department": "Finance",
+      "role": "Financial Analyst",
+      "joinDate": "2023-11-12",
+      "status": "inactive",
+      "id": "5"
+    },
+    {
+      "name": "Apoorva",
+      "email": "apoorvaappu436@gmail.com",
+      "department": "Engineering",
+      "role": "Frontend Developer",
+      "joinDate": "2024-01-15",
+      "status": "active",
+      "id": "1qikv60CtVg"
+    },
+    {
+      "name": "Chandana",
+      "email": "chandana436@gmail.com",
+      "department": "Engineering",
+      "role": "Frontend Developer",
+      "joinDate": "2026-09-10",
+      "status": "active",
+      "id": "304uwQxpCzQ"
+    }
+  ]
+}
