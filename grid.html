@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 100vw;
+        height: 100%;
+        border: 1px solid;
+        display: grid;
+        grid-template-areas:
+          "header header header header header"
+          "left menu menu menu right"
+          "footer footer footer footer footer";
+        padding: 20px;
+        gap: 20px;
+        background-color: aqua;
+        /* justify-content: space-around; */
+      }
+      .block {
+        /* background-color: pink; */
+        box-shadow: 0px 0px 5px;
+        border-radius: 8px;
+        padding: 20px;
+      }
+      .block:nth-child(1) {
+        grid-area: header;
+      }
+      .block:nth-child(2) {
+        grid-area: left;
+      }
+      .block:nth-child(3) {
+        grid-area: menu;
+      }
+      .block:nth-child(4) {
+        grid-area: right;
+      }
+      .block:nth-child(5) {
+        grid-area: footer;
+      }
+
+      h1 {
+        text-align: center;
+      }
+      .block nav{
+        padding:25px 50px;
+      }
+      .block nav ul li{
+        display: inline-block;
+      }
+      .block nav ul li a{
+        text-decoration: none;
+        padding: 12px 18px;
+        background-color: grey;
+        color:white;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="block" id="block1">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+      </div>
+      <div class="block" id="block2">
+        <h3>Left Article</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas
+          quis ea sint ipsum, velit perspiciatis blanditiis neque aut esse eaque
+          a quasi ut. Asperiores magnam ipsam tempora nihil odit, quam
+          recusandae animi impedit illo quasi tenetur libero mollitia. Ipsum
+          facere, omnis recusandae nulla consectetur praesentium quos nostrum
+          quisquam quo atque ex repellat eius error, architecto voluptates
+          distinctio earum, odio non exercitationem iure possimus voluptas odit?
+          Quaerat distinctio ullam perspiciatis reiciendis iste? Laborum,
+          perferendis odit unde quisquam velit possimus ullam quam eaque nemo
+          reprehenderit eos voluptas ipsum culpa animi repellat optio hic
+          accusantium sed aliquam cupiditate illum, sint facilis necessitatibus.
+          Soluta?
+        </p>
+      </div>
+      <div class="block" id="block3">
+        <h3>Main Article</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+          excepturi dolore itaque nisi non mollitia provident corrupti nam
+          consectetur quis! Ducimus, officia porro, deleniti necessitatibus
+          corrupti quis tempore adipisci atque fuga ratione ipsa corporis
+          tenetur harum laborum! Expedita corporis, excepturi, esse deleniti
+          odit ipsum dolores deserunt nostrum architecto veritatis, quae non
+          similique porro officiis aut. Totam aut eligendi illum iure quidem
+          cumque ratione hic perspiciatis, aspernatur exercitationem corporis
+          repellat, ab mollitia voluptate facilis dolore quisquam velit nesciunt
+          possimus. Laborum, sequi! In dolor ad cupiditate, deserunt velit
+          distinctio! Corporis non culpa consequatur, quod quo velit fugit
+          aspernatur dignissimos consequuntur suscipit earum incidunt veritatis
+          praesentium natus expedita? Excepturi repellat odit sapiente magnam
+          repudiandae, pariatur ut unde non, molestias maxime fugiat cum iure
+          porro vero molestiae fuga esse! Quis beatae illum inventore in iste.
+          Aliquid excepturi magnam facere repudiandae labore, esse doloribus, et
+          aut voluptas iste soluta illum. Ipsum commodi impedit repudiandae
+          corporis odio asperiores nostrum aperiam esse unde reiciendis tempora,
+          cupiditate porro officia delectus modi, fugiat fuga iste. Cum non et
+          assumenda quam rerum numquam quo laborum, molestiae, itaque obcaecati
+          recusandae perspiciatis error eum atque natus libero repudiandae?
+          Delectus recusandae, iusto et vero nisi facilis consequatur, veniam
+          eum dolorum quas quod incidunt nesciunt debitis, iure molestias
+          repudiandae est libero quae aspernatur. Quae iure eveniet delectus
+          quisquam ab, ipsum cumque? Assumenda, dolores! Molestias at autem
+          minima exercitationem dolore distinctio a officia tempore sapiente
+          voluptates culpa qui quas dolores doloribus nulla consequuntur saepe
+          cupiditate non rem explicabo, eligendi, ab inventore soluta fugiat.
+          Voluptate, expedita cumque porro doloremque deleniti dolorum vitae
+          veniam delectus, eos perferendis perspiciatis debitis velit similique
+          ad. Commodi voluptate veniam beatae, harum, nulla accusamus excepturi
+          optio, necessitatibus blanditiis perspiciatis sequi sunt dignissimos
+          itaque! At veniam quia quam repudiandae impedit non ad harum nam
+          adipisci hic porro nobis dolor dignissimos consequatur eos vel
+          expedita, sed sit soluta odit placeat voluptas id ipsum cum! Dolorem
+          ipsa perspiciatis vel, quis fuga earum ducimus autem rem deleniti
+          ipsam beatae exercitationem alias quod officia doloribus, a modi sit
+          saepe assumenda expedita. Fugiat, tenetur? Ducimus natus est odit
+          officia cumque amet ratione, molestias nulla omnis ut adipisci, quos
+          magni quam fugiat repudiandae at assumenda? Odio, aliquam commodi,
+          voluptate laudantium quas magnam ullam voluptatibus dolor, veritatis
+          id atque necessitatibus tenetur? Distinctio tenetur eius saepe
+          excepturi! Est aliquid autem praesentium, eaque, natus magnam nostrum
+          ad quos quas deleniti quo in laborum quasi totam, repudiandae
+          inventore ea maxime error? Alias nulla neque quas blanditiis,
+          temporibus illo quod similique a eaque modi itaque adipisci vitae,
+          tempora laborum nisi omnis, non nam cumque voluptatibus. In
+          perspiciatis, mollitia sed architecto quo minima. Asperiores culpa qui
+          ducimus illo natus! Iste sunt reiciendis doloribus eius amet, alias
+          dignissimos libero ab officiis non numquam corrupti unde illo eos nam
+          quisquam error. Harum doloribus atque quae, doloremque numquam tempore
+          quia voluptatibus incidunt? Aliquid repudiandae fugiat, doloremque
+          asperiores aut necessitatibus inventore. Quia facere suscipit, earum
+          adipisci obcaecati delectus, vel ipsum est deserunt doloribus
+          perferendis eos laudantium molestias nostrum fugit id iusto non hic?
+          Libero ut sed reprehenderit placeat laudantium.
+        </p>
+      </div>
+      <div class="block" id="block4">
+        <h3>Right Article</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi eos iure
+          quo reiciendis autem praesentium nam placeat, dicta aspernatur saepe
+          cum non voluptatum quam, facilis exercitationem quasi deleniti,
+          tempora vel possimus est veritatis. Atque expedita maxime, aut
+          voluptate molestiae tenetur ut nam reprehenderit consectetur officia
+          earum praesentium unde maiores eum dolor nulla ipsa ipsum odit
+          obcaecati, debitis veritatis, iste quisquam dolore? Veritatis velit
+          beatae tempora aut. Sint possimus vel illum doloremque! Quod commodi,
+          ducimus quam repellendus provident iure iste eius necessitatibus non a
+          blanditiis architecto tempore itaque tempora adipisci ea doloremque
+          asperiores atque nihil voluptatum et soluta, quia minus perferendis!
+        </p>
+      </div>
+      <div class="block" id="block5">
+        <h4>@copyright</h4>
+      </div>
+    </div>
+  </body>
+</html>
