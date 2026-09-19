@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 400px;
+            width: 50%;
+            border: 1px solid;
+            margin-top: 50px;
+            display: flex;
+            
+        }
+        #container1{
+           justify-content: space-evenly;
+           /* align-items: center; */
+        }
+        #container2{
+            flex-direction: column;
+            justify-content: center;
+            align-items:start;
+        }
+        #container3{
+           flex-wrap: wrap;
+           justify-content: space-evenly;
+           align-items:center;
+        }
+        #container4{
+
+            flex-wrap: wrap-reverse;
+            flex-direction:column-reverse;
+        }
+        #container5{
+            width: 400px;
+            
+        }
+        #container5>#child2{
+            /* flex-basis: 50px;
+            width:200px; */
+            flex-shrink: 0;
+            flex-grow: 2;
+
+        }
+        #container5>#child1{
+            flex-shrink: 2;
+            flex-grow: 2;
+            order: 1;
+        }
+        #container5>#child3{
+            flex-shrink: 3;
+            flex-grow: 2;
+            order: 2;
+            align-self: end;
+        }
+        .container .child{
+            height: 100px;
+            width: 100px;
+            text-align: center;
+            line-height: 100px;
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="container1">
+        <div class="child" id="child1">BOX1</div>
+        <div class="child" id="child2">BOX2</div>
+        <div class="child" id="child3">BOX3</div>
+        <div class="child" id="child4">BOX4</div>
+        <div class="child" id="child5">BOX5</div>
+    </div>
+    <div class="container" id="container2">
+        <div class="child" id="child1">BOX1</div>
+        <div class="child" id="child2">BOX2</div>
+        <div class="child" id="child3">BOX3</div>
+        <!-- <div class="child" id="child4">BOX4</div>
+        <div class="child" id="child5">BOX5</div> -->
+    </div>
+    <div class="container" id="container3">
+        <div class="child" id="child1">BOX1</div>
+        <div class="child" id="child2">BOX2</div>
+        <div class="child" id="child3">BOX3</div>
+        <div class="child" id="child4">BOX4</div>
+        <div class="child" id="child5">BOX5</div>
+        <div class="child" id="child6">BOX6</div>
+        <div class="child" id="child7">BOX7</div>
+        <div class="child" id="child8">BOX8</div>
+        <div class="child" id="child9">BOX9</div>
+        <div class="child" id="child10">BOX10</div>
+        <div class="child" id="child11">BOX11</div>
+        <div class="child" id="child12">BOX12</div>
+        <div class="child" id="child13">BOX13</div>
+        <div class="child" id="child14">BOX14</div>
+        <div class="child" id="child15">BOX15</div>
+        <div class="child" id="child16">BOX16</div>
+        <div class="child" id="child17">BOX17</div>
+        <div class="child" id="child18">BOX18</div>
+        <div class="child" id="child19">BOX19</div>
+        <div class="child" id="child20">BOX20</div>
+        <div class="child" id="child20">BOX21</div>
+        <div class="child" id="child20">BOX22</div>
+        <div class="child" id="child20">BOX23</div>
+        <div class="child" id="child20">BOX24</div>
+        <div class="child" id="child20">BOX25</div>
+        <div class="child" id="child20">BOX26</div>
+        <div class="child" id="child20">BOX27</div>
+    </div>
+    <div class="container" id="container4">
+        <div class="child" id="child1">BOX1</div>
+        <div class="child" id="child2">BOX2</div>
+        <div class="child" id="child3">BOX3</div>
+        <div class="child" id="child4">BOX4</div>
+        <div class="child" id="child5">BOX5</div>
+    </div>
+    <div class="container" id="container5">
+        <div class="child" id="child1">BOX1</div>
+        <div class="child" id="child2">BOX2</div>
+        <div class="child" id="child3">BOX3</div>
+        <!-- <div class="child" id="child4">BOX4</div>
+        <div class="child" id="child5">BOX5</div> -->
+    </div>
+</body>
+</html>
